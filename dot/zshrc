@@ -6,6 +6,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 #!-------------------------
 # Aliases
 alias neo='neofetch'
-alias vim='neovim'
+alias vim='nvim'
 alias ccw='cc -Wall -Wextra -Werror'
 alias norm='norminette -R CheckForbiddenSourceHeader'
