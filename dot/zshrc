@@ -5,6 +5,7 @@ tmux
 export PATH="$HOME/.cargo/bin:$PATH"
 #!-------------------------
 # Aliases
-alias neo='nvim'
+alias neo='neofetch'
+alias vim='neovim'
 alias ccw='cc -Wall -Wextra -Werror'
 alias norm='norminette -R CheckForbiddenSourceHeader'
