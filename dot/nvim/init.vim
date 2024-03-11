@@ -1,4 +1,4 @@
-colorscheme desert
+colorscheme habamax
 set autoindent
 set cc=81
 set cursorline
