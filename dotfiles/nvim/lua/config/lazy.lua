@@ -17,43 +17,43 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
-	-- Check for automatic plugin updates
-	checker = { enabled = true },
-	spec = {
-		-- Add LazyVim and its plugins
-		{
-			"LazyVim/LazyVim",
-			opts = {
-				colorscheme = "desert",
-			},
-			import = "lazyvim.plugins",
-		},
-		-- Extras plugins
-		{ import = "lazyvim.plugins.extras.ui.mini-animate" },
-		{ import = "lazyvim.plugins.extras.coding.copilot" },
-		-- Custom plugins (override defaults)
-		{ import = "plugins" },
-	},
-	defaults = {
-		-- If false, only lazy-loads LazyVim plugins. Custom plugins will load at startup.
-		lazy = false,
-		-- Set to false to avoid breaking the current Neovim install with outdated plugin versions.
-		version = false,
-	},
-	performance = {
-		rtp = {
-			disabled_plugins = {
-				"getscript",
-				"getscriptPlugin",
-				"gzip",
-				"rrhelper",
-				"tohtml",
-				"tutor",
-				"vimball",
-				"vimballPlugin",
-				"zip",
-				"zipPlugin",
-			},
-		},
-	},
+  install = { colorscheme = { "tokyonight", "habamax" } },
+  -- Check for automatic plugin updates
+  checker = { enabled = true },
+  spec = {
+    -- Add LazyVim and its plugins
+    {
+      "LazyVim/LazyVim",
+      opts = {
+        colorscheme = "tokyonight",
+      },
+      import = "lazyvim.plugins",
+    },
+    -- Extras plugins
+    { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    -- Custom plugins (override defaults)
+    { import = "plugins" },
+  },
+  defaults = {
+    -- If false, only lazy-loads LazyVim plugins. Custom plugins will load at startup.
+    lazy = false,
+    -- Set to false to avoid breaking the current Neovim install with outdated plugin versions.
+    version = false,
+  },
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "getscript",
+        "getscriptPlugin",
+        "gzip",
+        "rrhelper",
+        "tohtml",
+        "tutor",
+        "vimball",
+        "vimballPlugin",
+        "zip",
+        "zipPlugin",
+      },
+    },
+  },
 })
